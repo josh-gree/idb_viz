@@ -1,0 +1,163 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+
+.overlays canvas {
+  mix-blend-mode: multiply;
+}
+
+.mapboxgl-popup {
+    z-index: 8;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0);
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      background: rgba(255, 255, 255, 0.75);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+}
+
+.mapboxgl-popup-content {
+    z-index: 8;
+    pointer-events: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      background: rgba(255, 255, 255, 0.75);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+}
+
+#adminHover {
+    position: fixed;
+    z-index: 8;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.9);
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      background: rgba(255, 255, 255, 0.75);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+}
+
+h1 {
+    font-family: merriweather;
+}
+
+#mapControls {
+    position: fixed;
+    z-index: 9;
+  top: 10px;
+    left: 10px;
+  height: 200px;
+  padding: 10px;
+}
+
+#mapControls > div {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.75);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+#legend {
+    position: fixed;
+    z-index: 9;
+    top: 10px;
+    padding: 20px;
+    right: 10px;
+}
+
+#datatable {
+  position: fixed;
+  bottom: 0px;
+  z-index: 9;
+  height: 25%;
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
+}
+
+@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+  #datatable {
+  position: fixed;
+  bottom: 0px;
+  z-index: 9;
+  height: 25%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  }
+
+.header {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+.header::-webkit-scrollbar { 
+        display: none; 
+      }
+
+.rc-slider-tooltip {
+    z-index: 10;
+}
+
+.sidebar {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid #eee;
+    }
+
+.item {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #eee;
+    }
+.item:hover {
+  background-color: rgba(0, 0, 0, .2);
+}
+.item::-webkit-scrollbar { 
+        display: none; 
+      }
+.hoveredItem {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.container {
+  display: grid;
+}
+
+.sticky {
+  min-width: 5em;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+#legend > svg {
+    display: block;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 1);
+}
+
+label {
+    padding-right: 5px;
+}
